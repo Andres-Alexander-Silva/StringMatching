@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,23 +20,30 @@
         <div class="col-md-8">
           <div class="card shadow">
             <div class="card-header d-flex">
-              <img src="assets/UFPS_Logo.png" alt="Logo" width="60" />
+              <img src="assets/UFPS_Logo.png" alt="Logo" width="90" />
               <h5
                 class="card-title fs-1"
                 style="margin-left: 20px; margin-top: 0.3rem"
               >
-                String Matching: Karp Robin
+                String Matching Method: Karp Robin
               </h5>
             </div>
             <div class="card-body">
               <div class="d-flex">
+                <h5 class="mb-3">
+                  <strong style="color: red">karp Robin:</strong> is a substring
+                  search technique that uses hash functions to efficiently find
+                  occurrences of a pattern in a text.
+                </h5>
+              </div>
+              <div class="d-flex">
                 <div>
-                  <label>Palabra a Buscar:</label>
+                  <label>Pattern:</label>
                   <input
                     type="text"
                     id="patron"
                     class="form-control mb-3"
-                    placeholder="Palabra"
+                    placeholder="XXX"
                   />
                 </div>
               </div>
@@ -49,15 +56,23 @@
                   aria-describedby="fileHelp"
                   onchange="cargarTXT()"
                 />
-                <button class="btn btn-danger" onclick="generarPDF(event)" style="margin-left: 20px;">
+                <button
+                  class="btn btn-danger"
+                  onclick="generarPDF(event)"
+                  style="margin-left: 20px"
+                >
                   <img src="assets/file_download_white_24dp.svg" /> PDF
                 </button>
-                <button class="btn btn-primary" onclick="buscar()" style="margin-left: 20px;">
-                  <img src="assets/search_white_24dp.svg" /> Buscar
+                <button
+                  class="btn btn-primary"
+                  onclick="buscar()"
+                  style="margin-left: 20px"
+                >
+                  <img src="assets/search_white_24dp.svg" /> Matching
                 </button>
               </div>
               <div class="mb-3">
-                <label for="resultTextarea">Resultado:</label>
+                <label for="resultTextarea">Output:</label>
                 <textarea
                   id="resultado"
                   class="form-control"
@@ -68,14 +83,14 @@
               </div>
             </div>
             <div class="card-footer text-muted">
-              Desarrollador 1: Andres Alexander Silva Cod_UFPS: 1152231<br />
-              Desarrollador 2: Brayan Alexander Perutty Ramirez Cod_UFPS: 1151682
+              Developer 1: Andres Alexander Silva Cod_UFPS: 1152231<br />
+              Developer 2: Brayan Alexander Perutty Ramirez Cod_UFPS: 1151682
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="template" style="display: none;"></div>
+    <div id="template" style="display: none"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
